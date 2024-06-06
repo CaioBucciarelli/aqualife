@@ -1,0 +1,443 @@
+:root {
+  --branco: #FFF;
+  --preto: #000;
+  --cinza: #DDD;
+  --cinza-escuro: #aaa;
+  --cinza-azul: #456;
+  --azul-claro: ##ACF;
+  --azul: #2BE;
+  --azul-escuro: #00091D;
+  --font-primaria: 'Montserrat', sans-serif;
+  --font-secundaria: 'Open Sans', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--font-primaria);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/****************************************************************** VIDEO FUNDO ******************************************************************/
+
+.hero {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 21, 37, .8);
+  z-index: -1;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/******************************************************************** HEADER ********************************************************************/
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  img {
+    width: 120px;
+  }
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  li a {
+    color: var(--branco);
+  }
+}
+
+.menu ul li a:hover {
+  color: var(--azul);
+}
+
+/********************************************************************* INTRO *********************************************************************/
+
+.intro {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h1 {
+    color: var(--branco);
+    font-size: 3rem;
+  }
+  p {
+    color: var(--cinza);
+    font-size: 1rem;
+    font-family: var(--font-secundaria);
+    width: 50%;
+    margin-top: 12px;
+  }
+  a {
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: .3s;
+    margin-top: 32px;
+  }
+  a:hover {
+    background: var(--branco);
+    color: var(--azul-escuro);
+  }
+}
+
+/******************************************************************* PROBLEMA *******************************************************************/
+
+.section-problema {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 160px;
+  padding: 120px 20px;
+  img {
+    width: 640px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.section-problema-conteudo{
+  & > span {
+    text-transform: uppercase;
+    color: var(--cinza-escuro);
+    letter-spacing: 5px;
+  }
+  h2 {
+    font-size: 3.5rem;
+    color: var(--azul-escuro);
+  }
+  h2 > span {
+    background: var(--azul);
+    color: var(--branco);
+    border-radius: 4px;
+    padding: 0px 8px;
+  }
+  & > p {
+    font-family: var(--font-secundaria);
+    font-size: 1.125rem;
+    color: var(--cinza-azul);
+    margin-top: 32px;
+  }
+  & > p + p {
+    margin-top: 12px;
+  }
+}
+
+.caracteristicas {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  margin-top: 100px;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    color: var(--azul-escuro);
+
+  }
+  p {
+    font-family: var(--font-secundaria);
+    color: var(--cinza-azul);
+    font-size: 1.125rem;
+  }
+}
+
+.caracteristicas::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background: var(--cinza);
+  top: -50px;
+}
+
+/****************************************************************** TECNOLOGIA ******************************************************************/
+.section-tecnologia-bg {
+  background: var(--azul-escuro);
+}
+
+.section-tecnologia {
+  color: var(--branco);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  h2 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+
+.tecnologias {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  div {
+    background: var(--branco);
+    border-radius: 4px;
+    padding: 20px;
+    img {
+      border-radius: 4px;
+    }
+    h3 {
+      margin-top: 8px;
+      color: var(--azul-escuro);
+    }
+    p {
+      margin-top: 12px;
+      color: var(--cinza-azul);
+      font-family: var(--font-secundaria);
+      max-width: 564px;
+    }
+  }
+}
+
+/******************************************************************* OBJETIVO *******************************************************************/
+
+.section-objetivo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 20px;
+  gap: 40px;
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+.objetivos {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  li {
+    img {
+      width: 40px;
+      color: var(--azul);
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 4px 0px;
+      color: var(--azul-escuro);
+    }
+    p {
+      width: 46ch;
+      color: var(--cinza-azul);
+      font-family: var(--font-secundaria);
+    }
+  }
+}
+
+/******************************************************************** PUBLICO ********************************************************************/
+
+.section-publico-bg {
+  background: var(--azul-escuro);
+}
+
+.section-publico {
+  padding: 120px 20px;
+  color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h2 {
+    font-size: 2rem;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    li {
+      width: 420px;
+      img {
+        border-radius: 4px;
+      }
+      h3 {
+        font-size: 1.2rem;
+        margin-top: 8px;
+      }
+      p {
+        color: var(--cinza);
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+/************************************************************** BENEFÍCIOS + AJUDA **************************************************************/
+
+.section-beneficios-ajuda-bg {
+  background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url("../img/agua-viva.jpg") no-repeat center center;
+}
+
+.section-beneficios-ajuda {
+  color: var(--azul-escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  span {
+    text-transform: uppercase;
+    color: var(--cinza-azul);
+    letter-spacing: 5px;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    width: 60%;
+    color: var(--cinza-azul);
+  }
+}
+
+.section-beneficios-ajuda:nth-child(1) {
+  padding-top: 120px;
+}
+
+.section-beneficios-ajuda:nth-child(2) {
+  margin-top: 60px;
+  padding-bottom: 120px;
+}
+
+/******************************************************************** FOOTER ********************************************************************/
+
+.footer-bg {
+  background: var(--azul-escuro);
+}
+
+.footer {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  img {
+    width: 120px;
+  }
+  p {
+    color: var(--cinza);
+  }
+}
+
+
+/****************************************************************** RESPONSIVO ******************************************************************/
+@media (max-width: 1300px) {
+  .section-problema > img {
+    display: none;
+  }
+  .section-objetivo {
+    padding: 60px 20px;
+  }
+  .objetivos {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    gap: 20px;
+    justify-content: center;
+  }
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+  .intro p {
+    width: 80%;
+  }
+  .section-problema-conteudo h2 {
+    font-size: 2.5rem;
+  }
+  .section-tecnologia h2 {
+    font-size: 2.5rem;
+  }
+  .tecnologias {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .section-objetivo h2 {
+    font-size: 2.5rem;
+  }
+  .section-beneficios-ajuda h2 {
+    font-size: 2.5rem;
+  }
+  .section-beneficios-ajuda p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .section-tecnologia h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .caracteristicas {
+    flex-wrap: wrap;
+  }
+}
