@@ -455,6 +455,12 @@ video {
   cursor: pointer;
 }
 
+#dica {
+  margin-top: 4px;
+  color: var(--cinza-azul);
+  font-size: .875rem;
+}
+
 .btn-login:hover {
   background: var(--branco);
   border: 1px solid var(--azul-escuro);
