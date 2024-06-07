@@ -66,7 +66,7 @@ video {
 /******************************************************************** HEADER ********************************************************************/
 
 .header {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,10 +77,15 @@ video {
   }
 }
 
+#login .header-bg {
+  background: var(--azul-escuro);
+}
+
 .menu ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 32px;
   li a {
     color: var(--branco);
@@ -89,6 +94,20 @@ video {
 
 .menu ul li a:hover {
   color: var(--azul);
+}
+
+.header .menu ul li:nth-child(7) a {
+  padding: 8px 24px;
+  border: 1px solid var(--branco);
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.header .menu ul li:nth-child(7) a:hover {
+  background: var(--branco);
+  color: var(--azul-escuro);
 }
 
 /********************************************************************* INTRO *********************************************************************/
@@ -368,6 +387,7 @@ video {
 }
 
 .footer {
+  height: 300px;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -379,6 +399,74 @@ video {
   p {
     color: var(--cinza);
   }
+}
+
+/********************************************************************* LOGIN *********************************************************************/
+
+.section-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px - 300px);
+}
+
+.card-login {
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--azul-escuro);
+  }
+}
+
+.card-login div {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-weight: 700;
+    color: #456;
+  }
+  input {
+    border: none;
+    background: #eee;
+    border-radius: 4px;
+    padding: 12px 16px;
+    width: 400px;
+    margin-top: 8px;
+  }
+  & input::placeholder {
+    font-size: 1rem;
+  }
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--branco);
+  background: var(--azul-escuro);
+  border: 1px solid var(--azul-escuro);
+  border-radius: 4px;
+  margin-top: 20px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: var(--branco);
+  border: 1px solid var(--azul-escuro);
+  color: var(--azul-escuro);
+}
+
+.card-login > div {
+  margin-top: 40px;
+}
+
+.card-login div + div {
+  margin-top: 20px;
 }
 
 
