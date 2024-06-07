@@ -14,3 +14,20 @@ function validarLogin(){
     dica.innerText = "Dica: sequencia de números"
   }
 }
+
+/************************************************************** CARROSSEL DINÂMICO **************************************************************/
+
+const imagens = document.getElementById('img');
+const imagem = document.querySelectorAll('#img img')
+
+let idx = 0;
+function carrossel() {
+  idx++
+
+  if (idx > imagem.length - 1) {
+    idx = 0;
+  }
+
+  imagens.style.transform = `translateX(${-idx * 640}px)`;
+}
+setInterval(carrossel, 2000)

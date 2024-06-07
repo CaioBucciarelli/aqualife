@@ -475,10 +475,28 @@ video {
   margin-top: 20px;
 }
 
+/************************************************************** CARROSSEL DINÂMICO **************************************************************/
+
+.carrossel {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.carrossel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.carrossel-container img {
+  object-fit: cover;
+  min-width: 640px;
+  height: 800px;
+}
 
 /****************************************************************** RESPONSIVO ******************************************************************/
 @media (max-width: 1300px) {
-  .section-problema > img {
+  .carrossel{
     display: none;
   }
   .section-objetivo {
