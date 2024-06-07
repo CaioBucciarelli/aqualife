@@ -12,3 +12,6 @@ Projeto:
   - O público alvo
   - Quais os benefícios
   - Como ajudaria no dia a dia
+
+OBS:
+O slide some a partir de 1300 px pra baixo, então eu tirei de vizualização para ficar bonito no responsivo, o slide esta funcionando, mas apenas pra 1301 px de tela ou mais
